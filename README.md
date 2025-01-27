@@ -1,9 +1,11 @@
 ***SOBRE O PROJETO
 
+***OBJETIVO
 Esse projeto tem como objetivo criar o backend para um sistema de coleções de jogos,
 que os organiza em listas de acordo com a categoria, informa as características dos jogos
 de forma resumida na representação no formato de lista e completa ao clicar em um deles.
 
+***ARQUITETURA
 O backend disponibiliza uma API REST para a comunicação com o frontend, este não é desenvolvido
 nesse projeto, e acessa os recursos armazenados em um banco de dados utilizando consultas SQL (nativeQuery = true).
 
@@ -18,7 +20,24 @@ as ações a serem realizadas para obter os dados desejados, e solicita as infor
 os dados no formato de projeções utilizando o framework Spring Data JPA (Java Persistance API) para
 criação de repositórios com dados permanentes, e Hibernate, para interação com o banco de dados.
 
+***Verificação das requisições HTTP (Postman)
 
+Jogos
+![image](https://github.com/user-attachments/assets/9fd13631-4310-4797-b95b-d92d918e472e)
+
+Listas Disponíveis
+![image](https://github.com/user-attachments/assets/9e1ce8a6-d3d2-4f1e-89d1-fc15737b3fb4)
+
+Jogos Organizados em Listas (exemplo: idLista = 2)
+![image](https://github.com/user-attachments/assets/fc7b6e68-7441-4eea-9869-39ae9f367c5a)
+
+Informações do Jogo ao Clicar (exemplo: idJogo = 1)
+![image](https://github.com/user-attachments/assets/745ecefd-c9ba-47de-9fc2-d48adac7a55b)
+
+Realocação do jogo na lista
+![image](https://github.com/user-attachments/assets/6f28e392-2551-471d-9253-9f89e86b0883)
+
+Neste caso, foi utilizado o método POST, pois não é uma consulta, e sim uma modificação (não idempotente) no banco de dados.
 
 ***TECNOLOGIAS
 

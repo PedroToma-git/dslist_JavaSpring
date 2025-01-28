@@ -60,5 +60,5 @@ Neste caso, foi utilizado o método POST, pois não é uma consulta, e sim uma m
 
 #### Banco de dados
 - H2 (testes)
-- Postgresql (implantação)
+- Postgresql (implantação usando Docker)
 

@@ -42,6 +42,10 @@ criação de repositórios com dados permanentes e o Hibernate para interação 
 
 Neste caso, foi utilizado o método POST, pois não é uma consulta, e sim uma modificação (não idempotente) no banco de dados.  
 
+#### Banco de Dados H2
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/113950175/407168626-259cb887-ba1e-4a0a-af38-833b57a24414.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250128%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250128T031921Z&X-Amz-Expires=300&X-Amz-Signature=cf799a23f040399a22d2be1e2c990960175253b8295b18197b5677199b22929a&X-Amz-SignedHeaders=host" width="600" height="300" />
+
+
 ### TECNOLOGIAS
 
 #### Linguagens

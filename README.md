@@ -1,54 +1,56 @@
-***SOBRE O PROJETO
+###SOBRE O PROJETO
 
-***OBJETIVO
-Esse projeto tem como objetivo criar o backend para um sistema de coleções de jogos,
-que os organiza em listas de acordo com a categoria, informa as características dos jogos
-de forma resumida na representação no formato de lista e completa ao clicar em um deles.
+##OBJETIVO
+Esse projeto tem como objetivo criar o backend para um sistema de coleções de jogos,  
+que os organiza em listas de acordo com a categoria, informa as características dos jogos  
+de forma resumida na representação no formato de lista e completa ao clicar em um deles.  
 
-***ARQUITETURA
-O backend disponibiliza uma API REST para a comunicação com o frontend, este não é desenvolvido
-nesse projeto, e acessa os recursos armazenados em um banco de dados utilizando consultas SQL (nativeQuery = true).
+##ARQUITETURA
+O backend disponibiliza uma API REST para a comunicação com o frontend, este não é desenvolvido  
+nesse projeto, e acessa os recursos armazenados em um banco de dados utilizando consultas SQL (nativeQuery = true).  
 
 ![image](https://github.com/user-attachments/assets/38f2dc13-1780-4437-8ef5-4be8eb522703)
+#Arquitetura Backend (3 camadas) e frontend
 
-O backend foi desenvolvido em um arquitetura de três camadas, em que "Controladores REST" realizam 
-a comunicação entre frontend e backend, atendendo as requisições HTTP e retornando 
-objetos DTO (Data Transfer Objects). Estes objetos DTO são criados com intuito de enviar apenas os
-dados necessários para o frontend, inclusive, eles são elaborados pela "Camada de serviço", que determina
-as ações a serem realizadas para obter os dados desejados, e solicita as informações a 
-"Camada de acesso a dados", esta irá realizar consultas SQL para acessar o banco de dados e retorna
-os dados no formato de projeções utilizando o framework Spring Data JPA (Java Persistance API) para
-criação de repositórios com dados permanentes, e Hibernate, para interação com o banco de dados.
+O backend foi desenvolvido em um arquitetura de três camadas, em que "Controladores REST" realizam  
+a comunicação entre frontend e backend, atendendo as requisições HTTP e retornando  
+objetos DTO (Data Transfer Objects). Estes objetos DTO são criados com intuito de enviar apenas os  
+dados necessários para o frontend, inclusive, eles são elaborados pela "Camada de serviço", que determina  
+as ações a serem realizadas para obter os dados desejados, e solicita as informações a  
+"Camada de acesso a dados", esta irá realizar consultas SQL para acessar o banco de dados e retorna  
+os dados no formato de projeções utilizando o framework Spring Data JPA (Java Persistance API) para  
+criação de repositórios com dados permanentes, e Hibernate, para interação com o banco de dados.  
 
-***Verificação das requisições HTTP (Postman)
+##Verificação das requisições HTTP (Postman)
+#As respostas estão no formato JSON
 
-Jogos
 ![image](https://github.com/user-attachments/assets/9fd13631-4310-4797-b95b-d92d918e472e)
+#Jogos
 
-Listas Disponíveis
 ![image](https://github.com/user-attachments/assets/9e1ce8a6-d3d2-4f1e-89d1-fc15737b3fb4)
+#Listas Disponíveis
 
-Jogos Organizados em Listas (exemplo: idLista = 2)
 ![image](https://github.com/user-attachments/assets/fc7b6e68-7441-4eea-9869-39ae9f367c5a)
+#Jogos Organizados em Listas (exemplo: idLista = 2)
 
-Informações do Jogo ao Clicar (exemplo: idJogo = 1)
 ![image](https://github.com/user-attachments/assets/745ecefd-c9ba-47de-9fc2-d48adac7a55b)
+#Informações do Jogo ao Clicar (exemplo: idJogo = 1)
 
-Realocação do jogo na lista
 ![image](https://github.com/user-attachments/assets/6f28e392-2551-471d-9253-9f89e86b0883)
+#Realocação do jogo na lista
 
-Neste caso, foi utilizado o método POST, pois não é uma consulta, e sim uma modificação (não idempotente) no banco de dados.
+Neste caso, foi utilizado o método POST, pois não é uma consulta, e sim uma modificação (não idempotente) no banco de dados.  
 
-***TECNOLOGIAS
+###TECNOLOGIAS
 
-Linguagens
+##Linguagens
 - Java
 - SQL
 
-Framework
+##Framework
 - Spring Boot
 
-Banco de dados
+##Banco de dados
 - H2 (testes)
 - Postgresql (implantação)
 
